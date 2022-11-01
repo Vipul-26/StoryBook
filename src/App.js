@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import BreadcrumbWrapper from './stories/Breadcrumb';
+import { Link } from '@mui/material';
+import { Typography } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hii</h1>
+      <BreadcrumbWrapper>
+        <Link underline="hover" color="inherit" href="#">
+          Home
+        </Link>
+        <Link underline="hover" color="inherit" href="#">
+          Catalog
+        </Link>
+        <Link underline="hover" color="inherit" href="#">
+          Accessories
+        </Link>
+        <Link underline="hover" color="inherit" href="#">
+          New Collection
+        </Link>
+        <Typography color="text.primary">
+          Belts
+        </Typography>
+      </BreadcrumbWrapper>
     </div>
   );
 }
